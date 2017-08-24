@@ -1,0 +1,209 @@
+body {
+  color: #666666;
+  font-family: "Open Sans", sans-serif;
+  position: relative;
+  background: url(../images/herobg.jpg) top center fixed;
+  background-size: cover;
+}
+.overlay{
+ position: absolute;
+ height:auto;
+ background-color:rgba(1, 59, 77, 0.6);
+ width: 100%;
+}
+.greenish{
+	/*background-color: #013b4d;*/
+    background:-webkit-linear-gradient(left, rgba(114, 228, 141, 0.32), rgba(76, 154, 206, 0.47));
+	border-radius: 0px;
+	border: none;
+    height: 60px;
+    width: 100%;
+    box-shadow: 2px 1px 5px 1px #081519;
+}
+.logo{
+    font-size: 30px;
+    font-family: Adobe Caslon Pro;
+    font-weight: 700;
+}
+.logo a{
+	color: #fff;
+	line-height: 60px;
+	text-decoration: none;
+}
+.margin_50{
+	margin-top: 50px;
+}
+/*.margin_50_bottom{
+	margin-bottom: 50px;
+}*/
+.float_left{
+	text-align: left!important;
+	color: #00c8ff;
+}
+.custom_button{
+	border: 1px  solid #00c8ff;
+	width: 200px;
+	border-radius: 25px;
+	background-color: transparent;
+    color: #00c8ff;
+    margin: 5px;
+}
+.custom_button:hover{
+	color: #ffffff;
+	border: 1px  solid #fff;
+}
+.formdata{
+	background-color: #013b4d;
+	border: 1px solid #013b4d;
+	padding: 20px;
+	border-radius:5px; 
+	height: 310px;
+}
+.codedispaly{
+	background-color: rgba(0, 0, 0, 0.52);
+	border: 2px solid #013b4d;
+	padding: 20px;
+	border-radius:5px; 
+	height: 310px;
+}
+.content{
+	margin-bottom:50px; 
+}
+.titles{
+	position: relative;
+	color: #00c8ff; 
+	font-family: initial
+}
+.titles::before{
+	content: "";
+    position: absolute;
+    height: 5px;
+    width: 20px;
+    left: 50%;
+    top: 35px;
+    background-color: #00c8ff;
+}
+.titles::after{
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 66px;
+    left: 48%;
+    top: 37px;
+    background-color: #00c8ff;
+}
+.tex{
+	background-color: rgba(0, 200, 255, 0.25)!important;
+    background-image: none;
+    border: 1px solid #00c8ff!important;
+    border-radius: 50px;
+    color: #fff;
+
+}
+.white_text{
+	color: #fff;
+}
+.white_text:hover{
+	color: rgb(4, 203, 255);
+}
+footer{
+	background:-webkit-linear-gradient(left, rgba(1, 19, 25, 0.82), rgba(16, 25, 32, 0.87));
+	position: absolute; 
+	width: 100%;
+}
+/*.input-group-addon.primary {
+    color: rgb(255, 255, 255);
+    background-color: rgb(50, 118, 177);
+    border-color: rgb(40, 94, 142);
+}
+.input-group-addon.success {
+    color: rgb(255, 255, 255);
+    background-color: rgb(92, 184, 92);
+    border-color: rgb(76, 174, 76);
+}*/
+.input-group-addon.info {
+    color: rgb(255, 255, 255);
+    background-color: rgba(57, 179, 215, 0.48);
+    border-color: rgb(38, 154, 188);
+    border-radius: 0px 20px 20px 0px;
+    border: 1px solid #00c8ff;
+}
+/*.input-group-addon.warning {
+    color: rgb(255, 255, 255);
+    background-color: rgb(240, 173, 78);
+    border-color: rgb(238, 162, 54);
+}*/
+.input-group-addon.danger {
+    color: rgb(255, 255, 255);
+    background-color: rgba(57, 179, 215, 0.48);
+    border-color: rgba(212, 63, 58, 0);
+    border-bottom: 1px solid #00c8ff;
+    border-top: 1px solid #00c8ff;
+}
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .web-link{
+    color:#7bb8ec;
+    }
+
+  .textarea-container {
+    position: relative;
+  }
+  .textarea-container #code_display {
+    width: 100%;
+    height: 260px;
+    background-color: #0f192a; 
+    overflow-x: scroll;
+    overflow-y: scroll;
+  }
+  .textarea-container button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #61a6e8;
+    
+  }
+
+  .modal-background{
+    color: #666666;
+    font-family: "Open Sans", sans-serif;
+    position: relative;
+    background: url(../images/herobg.jpg) top center fixed;
+    background-size: cover;
+
+  }
+
+  .overlay-modal{
+    height: auto;
+    background-color: rgba(14, 110, 140, 0.54);
+    width: 100%;
+    color: #28b5e0;
+  }
