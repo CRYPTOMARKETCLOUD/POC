@@ -59,7 +59,7 @@
 											</div>
 										</div>
 										<div class="form-group"> 
-											<div class="col-md-10 text-center">
+											<div class="col-md-12 text-center">
 												<button type="submit" onclick="generate()" id="bttn" class="btn btn-Primary custom_button" >Generate</button>
 												<button type="submit" onclick="reset()" class="btn btn-Primary custom_button">Reset</button>
 											</div>
@@ -102,7 +102,7 @@
 											<div class="col-md-11">
 												<div class="input-group">
 												<input type="text" class="form-control tex" id="bitcoin" value="1AUXsWrBVEVvttAu6sniHWFQYkQqEtEpL4" readonly>
-													<span class="input-group-addon danger btn" data-clipboard-action="copy" data-clipboard-target="#bitcoin"><span class="white_text glyphicon glyphicon-share"></span></span>
+													<span class="input-group-addon danger btn" data-clipboard-action="copy" data-clipboard-target="#bitcoin"><i class="white_text fa fa-clipboard" aria-hidden="true"></i></span>
 													<span class="input-group-addon info"><span data-toggle="modal" data-target="#myModal1" class="white_text glyphicon glyphicon-qrcode"></span></span>
 												</div>
 											</div>
@@ -112,7 +112,7 @@
 											<div class="col-md-11"> 
 												<div class="input-group">
 													<input type="text" class="form-control tex" id="ether" value="0x0DEDC3Da84b93B81D2Bf2C9C4681f47e274c2fbb" readonly>
-													<span class="input-group-addon danger btn" data-clipboard-action="copy" data-clipboard-target="#ether"><span class="white_text glyphicon glyphicon-share"></span></span>
+													<span class="input-group-addon danger btn" data-clipboard-action="copy" data-clipboard-target="#ether"><i class="white_text fa fa-clipboard" aria-hidden="true"></i></span>
 													<span class="input-group-addon info"><span data-toggle="modal" data-target="#myModal2" class="white_text glyphicon glyphicon-qrcode"></span></span>
 											    </div>
 											</div>
@@ -150,7 +150,7 @@
                         
                         <div class="modal-body text-center">
                                     
-                                    <h4>1AUXsWrBVEVvttAu6sniHWFQYkQqEtEpL4</h4>                    
+                                    <h4 class="white_text">1AUXsWrBVEVvttAu6sniHWFQYkQqEtEpL4 <span class="copy_link danger btn" data-clipboard-action="copy" data-clipboard-target="#bitcoin"><i class="white_text fa fa-clipboard" aria-hidden="true"></i></span></h4>                    
                                     <img src="/images/bitcoin.png" alt="Bitcoin Account QR" style="width:200px;height:200px; background-color:#fff">      
                                 
                         </div>
@@ -181,7 +181,7 @@
                         
                         <div class="modal-body text-center">
                             
-                            <h4>0x0DEDC3Da84b93B81D2Bf2C9C4681f47e274c2fbbX</h4>                    
+                            <h4 class="white_text">0x0DEDC3Da84b93B81D2Bf2C9C4681f47e274c2fbb <span class="copy_link danger btn" data-clipboard-action="copy" data-clipboard-target="#bitcoin"><i class="white_text fa fa-clipboard" aria-hidden="true"></i></span></h4>                    
                             <img src="/images/ether.png" alt="Ether Account QR" style="width:200px;height:200px;">      
                                 
                         </div>
@@ -211,6 +211,5 @@
 						console.error('Trigger:', e.trigger);
 					});
 			</script>
-
 </body>
 </html>

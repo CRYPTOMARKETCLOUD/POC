@@ -60,14 +60,21 @@ body {
 	height: 320px;
 }
 .codedispaly{
-	background-color: rgba(0, 0, 0, 0.52);
-	border: 2px solid #013b4d;
+	background-color: #0f192a;
+	border: 1px solid #00c8ff;
 	padding: 20px;
 	border-radius:5px; 
 	height: 320px;
 }
 .content{
 	margin-bottom:50px; 
+}
+.copy_link{
+    color: rgb(255, 255, 255);
+    background-color: rgba(57, 179, 215, 0.48);
+    border: 1px solid #00c8ff;
+    border-radius: 5px;
+    padding: 2px;
 }
 .titles{
 	position: relative;
@@ -184,12 +191,23 @@ footer{
   }
   .textarea-container button {
     position: absolute;
-    bottom: 0;
-    right: 0;
+     bottom:-38px;
+    right: -13px;
     margin-right: 10px;
     margin-bottom: 10px;
-    background-color: #61a6e8;
+    background-color: #00c8ff;
     
+  }
+  .btn.focus, .btn:focus, .btn:hover {
+   color: #f5efef!important;
+    text-decoration: none;
+  }
+  .close{
+      color:#fff!important;
+      opacity: 10!important;
+  }
+  pre{
+      border: none;
   }
 
   .modal-background{
@@ -200,10 +218,29 @@ footer{
     background-size: cover;
 
   }
+  .modal-header{
+    border-bottom: 1px solid #76defb;
+  }
+  .modal-footer{
+    border-top: 1px solid #76defb;
+  }
 
   .overlay-modal{
     height: auto;
     background-color: rgba(14, 110, 140, 0.54);
     width: 100%;
     color: #28b5e0;
+  }
+  .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+    outline: aqua!important;
+}
+
+  .btn-default{
+      background-color: #0997bf;
+      color: #EFF4F6;
+      border-color: #006480; 
+  }
+  .btn-default:hover{
+      background-color: #28b5e0!important;
+      color: #000000;
   }
