@@ -1,6 +1,5 @@
 
 gen = (req, res, next) => {
-    console.log('sdfds');
     ContractData = {
     contractName: req.body.contractName,
     tokenName: req.body.tokenName,
@@ -10,9 +9,9 @@ gen = (req, res, next) => {
     }
     var html=`
         pragma solidity ^0.4.8;
-        // ---------------------------------------------------------------------------------------
+        // -------------------------------------------------------------------------
         // ${ContractData.contractName} token contract
-        // ---------------------------------------------------------------------------------------
+        // -------------------------------------------------------------------------
         // ERC Token Standard #20 Interface
         contract ERC20Interface {
 
@@ -29,7 +28,8 @@ gen = (req, res, next) => {
         function transferFrom(address _from, address _to, uint256 _value) returns (bool success);
     
         function approve(address _spender, uint256 _value) returns (bool success);  
-        // Returns the amount which _spender is still allowed to withdraw from _owner
+        
+        // Return the amount which _spender is still allowed to withdraw from _owner
         function allowance(address _owner, address _spender) constant returns (uint256 remaining);
     
         // Triggered when tokens are transferred.
@@ -39,91 +39,88 @@ gen = (req, res, next) => {
         event Approval(address indexed _owner, address indexed _spender, uint256 _value);
         }
         
-        contract ${ContractData.contractName}Token is ERC20Interface {
-
-            string public constant symbol = '${ContractData.tokenSymbol}';
-            string public constant name = '${ContractData.tokenName}';
-            uint8 public constant decimals = ${ContractData.decimals};
-            uint256 _totalSupply = ${ContractData.totalSupply};
-            
-            // Owner of this contract
-            address public owner;
+        contract ${ContractData.contractName}Token is ERC20Interface 
+        {
+        string public constant symbol = '${ContractData.tokenSymbol}';
+        string public constant name = '${ContractData.tokenName}';
+        uint8 public constant decimals = ${ContractData.decimals};
+        uint256 _totalSupply = ${ContractData.totalSupply};
         
-            // Balances for each account
-            mapping(address => uint256) balances;
-        
-            // Owner of account approves the transfer of an amount to another account
-            mapping(address => mapping (address => uint256)) allowed;
-        
-            // Functions with this modifier can only be executed by the owner
-            modifier onlyOwner() {
-                if (msg.sender != owner) {
-                    throw;
-                }
-                _;
+        // Owner of this contract
+        address public owner;
+    
+        // Balances for each account
+        mapping(address => uint256) balances;
+    
+        // Owner of account approves the transfer of an amount to another account
+        mapping(address => mapping (address => uint256)) allowed;
+    
+        // Functions with this modifier can only be executed by the owner
+        modifier onlyOwner() {
+            if (msg.sender != owner) {
+                throw;
             }
-        
-            // Constructor
-            function ${ContractData.contractName}Token() {
-                owner = msg.sender;
-                balances[owner] = _totalSupply;
-            }
-        
-            function totalSupply() constant returns (uint256 totalSupply) {
-                totalSupply = _totalSupply;
-            }
-        
-            // What is the balance of a particular account?
-            function balanceOf(address _owner) constant returns (uint256 balance) {
-                return balances[_owner];
-            }
-        
-            // Transfer the balance from owner's account to another account
-            function transfer(address _to, uint256 _amount) returns (bool success) {
-
-                if (balances[msg.sender] >= _amount 
-                    && _amount > 0
-                    && balances[_to] + _amount > balances[_to]) {
-                    balances[msg.sender] -= _amount;
-                    balances[_to] += _amount;
-                    Transfer(msg.sender, _to, _amount);
-                    return true;
-                } else {
-                    return false;
-                }
-            }
-        
-            // Send _value amount of tokens from address _from to address _to
-            function transferFrom(
-                address _from,
-                address _to,
-                uint256 _amount
-            ) returns (bool success) {
-                if (balances[_from] >= _amount
-                    && allowed[_from][msg.sender] >= _amount
-                    && _amount > 0
-                    && balances[_to] + _amount > balances[_to]) {
-                    balances[_from] -= _amount;
-                    allowed[_from][msg.sender] -= _amount;
-                    balances[_to] += _amount;
-                    Transfer(_from, _to, _amount);
-                    return true;
-                } else {
-                    return false;
-                }
-            }
-            function approve(address _spender, uint256 _amount) 
-                returns (bool success) {
-                allowed[msg.sender][_spender] = _amount;
-                Approval(msg.sender, _spender, _amount);
-                return true;
-            }
-            function allowance(address _owner, address _spender) 
-                constant returns (uint256 remaining) {
-                return allowed[_owner][_spender];
-            }
+            _;
         }
     
+        // Constructor
+        function ${ContractData.contractName}Token() {
+            owner = msg.sender;
+            balances[owner] = _totalSupply;
+        }
+    
+        function totalSupply() constant returns (uint256 totalSupply) {
+            totalSupply = _totalSupply;
+        }
+    
+        // What is the balance of a particular account?
+        function balanceOf(address _owner) constant returns (uint256 balance) {
+            return balances[_owner];
+        }
+    
+        // Transfer the balance from owner's account to another account
+        function transfer(address _to, uint256 _amount) returns (bool success) {
+            if (balances[msg.sender] >= _amount 
+                && _amount > 0
+                && balances[_to] + _amount > balances[_to]) {
+                balances[msg.sender] -= _amount;
+                balances[_to] += _amount;
+                Transfer(msg.sender, _to, _amount);
+                return true;
+            } else {
+                return false;}
+        }
+    
+        // Send _value amount of tokens from address _from to address _to
+        function transferFrom(
+            address _from,
+            address _to,
+            uint256 _amount
+        ) returns (bool success) {
+            if (balances[_from] >= _amount
+                && allowed[_from][msg.sender] >= _amount
+                && _amount > 0
+                && balances[_to] + _amount > balances[_to]) {
+                balances[_from] -= _amount;
+                allowed[_from][msg.sender] -= _amount;
+                balances[_to] += _amount;
+                Transfer(_from, _to, _amount);
+                return true;
+            } else {
+                return false;}
+        }
+
+        function approve(address _spender, uint256 _amount) 
+            returns (bool success) {
+            allowed[msg.sender][_spender] = _amount;
+            Approval(msg.sender, _spender, _amount);
+            return true;
+        }
+
+        function allowance(address _owner, address _spender) 
+            constant returns (uint256 remaining) {
+            return allowed[_owner][_spender];}
+        }
 
 
 
@@ -131,37 +128,28 @@ gen = (req, res, next) => {
 
 
         
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         `;
-        
-       
 
         var nsh      =  require('node-syntaxhighlighter')
         , language =  nsh.getLanguage('js')
         , code     =  html
         ;
        
-      
         var html1 = nsh.highlight(code, language);
-        
-        // const Prism = require('node-prismjs');
-        // function highlight(lang, sourceCode) {
-        //   const language = Prism.languages[lang] || Prism.languages.autoit;
-        //   return Prism.highlight(sourceCode, language);
-        // }
-
-        // var Prism = require('prismjs');
-        
-        // // The code snippet you want to highlight, as a string
-        // var code = html;
-        
-        // // Returns a highlighted HTML string
-        // var html1 = Prism.highlight(code, Prism.languages.javascript);
-        // var html2 = Prism.highlight(html1, Prism.hooks.add);
-      
-        // Allow _spender to withdraw from your account, multiple times, up to the _value amount.
-            // If this function is called again it overwrites the current allowance with _value.
-        
         res.json({codeData: html1});
 }
 

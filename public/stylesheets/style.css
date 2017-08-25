@@ -33,9 +33,9 @@ body {
 .margin_50{
 	margin-top: 50px;
 }
-/*.margin_50_bottom{
+/* .margin_50_bottom{
 	margin-bottom: 50px;
-}*/
+} */
 .float_left{
 	text-align: left!important;
 	color: #00c8ff;
@@ -57,14 +57,14 @@ body {
 	border: 1px solid #013b4d;
 	padding: 20px;
 	border-radius:5px; 
-	height: 310px;
+	height: 320px;
 }
 .codedispaly{
 	background-color: rgba(0, 0, 0, 0.52);
 	border: 2px solid #013b4d;
 	padding: 20px;
 	border-radius:5px; 
-	height: 310px;
+	height: 320px;
 }
 .content{
 	margin-bottom:50px; 
