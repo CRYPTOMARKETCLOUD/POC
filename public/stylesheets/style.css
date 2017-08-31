@@ -53,7 +53,7 @@ Try it Yourself »
 	border: 1px  solid #00c8ff;
 	width: 200px;
 	border-radius: 25px;
-	background-color: transparent;
+background-color: transparent;
     color: #00c8ff;
     margin: 5px;
 }
@@ -61,6 +61,15 @@ Try it Yourself »
 	color: #ffffff;
 	border: 1px  solid #fff;
 }
+.greenish{
+    /*background-color: #013b4d;*/
+       background:-webkit-linear-gradient(left, rgba(114, 228, 141, 0.32), rgba(76, 154, 206, 0.47));
+    border-radius: 0px;
+    border: none;
+       height: 60px;
+       width: 100%;
+       box-shadow: 2px 1px 5px 1px #081519;
+    }
 .formdata{
 	background-color: #013b4d;
 	border: 1px solid #013b4d;
@@ -196,8 +205,8 @@ footer{
     width: 100%;
     height: 260px;
     background-color: #0f192a; 
-    overflow-x: scroll;
-    overflow-y: scroll;
+    /* overflow-x: scroll;
+    overflow-y: scroll; */
   }
   .textarea-container button {
     position: absolute;
