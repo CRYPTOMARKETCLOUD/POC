@@ -129,15 +129,6 @@ gen = (req, res, next) => {
 
         
 
-
-
-
-
-
-
-
-
-
         `;
 
         var nsh      =  require('node-syntaxhighlighter')
