@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Asenine';
+    src: url('Asenine.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aileron';
+    src: url('Aileron-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aileron';
+    src: url('Aileron-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aileron';
+    src: url('Aileron-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aileron';
+    src: url('Aileron-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aileron';
+    src: url('Aileron-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aileron';
+    src: url('Aileron-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aileron';
+    src: url('Aileron-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aileron';
+    src: url('Aileron-UltraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}

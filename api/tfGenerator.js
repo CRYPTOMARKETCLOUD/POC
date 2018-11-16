@@ -8,38 +8,12 @@ gen = (req, res, next) => {
     totalSupply: req.body.totalSupply
     }
     var html=`
-        pragma solidity ^0.4.8;
+        pragma solidity ^0.4.18;
         // -------------------------------------------------------------------------
         // ${ContractData.contractName} token contract
         // -------------------------------------------------------------------------
-        // ERC Token Standard #20 Interface
-        contract ERC20Interface {
-
-        // Get the total token supply
-        function totalSupply() constant returns (uint256 totalSupply);
-    
-        // Get the account balance of another account with address _owner
-        function balanceOf(address _owner) constant returns (uint256 balance);
-    
-        // Send _value amount of tokens to address _to
-        function transfer(address _to, uint256 _value) returns (bool success);
-    
-        // Send _value amount of tokens from address _from to address _to
-        function transferFrom(address _from, address _to, uint256 _value) returns (bool success);
-    
-        function approve(address _spender, uint256 _value) returns (bool success);  
         
-        // Return the amount which _spender is still allowed to withdraw from _owner
-        function allowance(address _owner, address _spender) constant returns (uint256 remaining);
-    
-        // Triggered when tokens are transferred.
-        event Transfer(address indexed _from, address indexed _to, uint256 _value);
-    
-        // Triggered whenever approve(address _spender, uint256 _value) is called.
-        event Approval(address indexed _owner, address indexed _spender, uint256 _value);
-        }
-        
-        contract ${ContractData.contractName}Token is ERC20Interface 
+        contract ${ContractData.contractName}Token 
         {
         string public constant symbol = '${ContractData.tokenSymbol}';
         string public constant name = '${ContractData.tokenName}';
@@ -48,12 +22,21 @@ gen = (req, res, next) => {
         
         // Owner of this contract
         address public owner;
+
+        // Owner of the platform
+        address public CMCowner = 0xBb165CdE6A1c60a10aed6135d9295788016030B8;
     
         // Balances for each account
         mapping(address => uint256) balances;
     
         // Owner of account approves the transfer of an amount to another account
         mapping(address => mapping (address => uint256)) allowed;
+
+        // Triggered when tokens are transferred.
+        event Transfer(address indexed _from, address indexed _to, uint256 _value);
+    
+        // Triggered whenever approve(address _spender, uint256 _value) is called.
+        event Approval(address indexed _owner, address indexed _spender, uint256 _value);
     
         // Functions with this modifier can only be executed by the owner
         modifier onlyOwner() {
@@ -66,11 +49,16 @@ gen = (req, res, next) => {
         // Constructor
         function ${ContractData.contractName}Token() {
             owner = msg.sender;
-            balances[owner] = _totalSupply;
+            
+            balances[CMCowner] = (10 * _totalSupply)/100;
+            balances[owner] = _totalSupply - balances[CMCowner];
+            Transfer(0x00, CMCowner, balances[CMCowner]);
+            Transfer(0x00, owner, balances[owner]);
+
         }
     
         function totalSupply() constant returns (uint256 totalSupply) {
-            totalSupply = _totalSupply;
+            return _totalSupply;
         }
     
         // What is the balance of a particular account?
@@ -137,7 +125,7 @@ gen = (req, res, next) => {
         ;
        
         var html1 = nsh.highlight(code, language);
-        res.json({codeData: html1});
+        res.json({codeData: html});
 }
 
 module.exports = {

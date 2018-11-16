@@ -63,7 +63,7 @@ background-color: transparent;
 }
 .greenish{
     /*background-color: #013b4d;*/
-       background:-webkit-linear-gradient(left, rgba(114, 228, 141, 0.32), rgba(76, 154, 206, 0.47));
+       background:-linear-gradient(to right,#050e1882 0,#297acd6b 100%);
     border-radius: 0px;
     border: none;
        height: 60px;
@@ -204,7 +204,7 @@ footer{
   .textarea-container #code_display {
     width: 100%;
     height: 260px;
-    background-color: #0f192a; 
+    background-color: #fff; 
     /* overflow-x: scroll;
     overflow-y: scroll; */
   }
@@ -217,6 +217,18 @@ footer{
     background-color: #00c8ff;
     
   }
+  .ico2{
+      margin: 20%;
+      padding: 10%;
+  }
+  .btn2 {
+    display: inline;
+    border: 1px solid black;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: #336798
+}
   .btn.focus, .btn:focus, .btn:hover {
    color: #f5efef!important;
     text-decoration: none;

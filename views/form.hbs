@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="/css/form.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+<div class="header">
+    <h1>LIST YOUR ICO</h1>
+  </div>
+
+<div class="columns ">
+      <div class="column forma">
+  <form method="post" enctype="multipart/form-data" id="uploader" class="control" novalidate="">
+<div class="field"><h1 class="title">Submit Your ICO</h1></div>
+<div class="formborder">
+   <h1><span><strong>Account Details </strong><small>all field required</small></span></h1>
+  <div class="field" style="margin-top:30px;">
+  <label class="label">Username*</label>
+  <div class="control has-icons-left">
+    <input class="input is-primary" type="text" placeholder="Username" name="username">
+    <span class="icon is-small is-left">
+      <i class="fa fa-user"></i>
+    </span>
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Email*</label>
+  <div class="control has-icons-left has-icons-right">
+    <input class="input is-primary" type="email" placeholder="Email Address" name="email">
+    <span class="icon is-small is-left">
+      <i class="fa fa-envelope"></i>
+    </span>
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Password*</label>
+  <p class="control has-icons-left">
+    <input class="input is-primary" type="password" placeholder="Password" name="password">
+    <span class="icon is-small is-left">
+      <i class="fa fa-lock"></i>
+    </span>
+  </p>
+</div>
+<div class="field">
+  <label class="label">Confirm your password*</label>
+  <p class="control has-icons-left">
+    <input class="input is-primary" type="password" placeholder="Confirm Password" name="password2">
+    <span class="icon is-small is-left">
+      <i class="fa fa-lock"></i>
+    </span>
+  </p>
+</div>
+</div>
+<div class="formborder">
+   <h1><span><strong>PRE-ICO SALE OPTIONAL </strong><small>Only if you have PRE-ICO SALE</small></span></h1>
+<div class="field" style="margin-top:30px;">
+<label class="label">PRE-ICO or Crowdsale Title (optional)</label>
+<div class="control ">
+  <input class="input is-primary" type="text" placeholder="For Example: Listico.io PRE-ICO" name="preicotitle">
+</div>
+<p class="help is-primary">Give Us Your PRE-ICO Or Crowdsale Tite (optional)</p>
+</div>
+<div class="field">
+<label class="label">Campaign Duration Set your PRE-ICO Start and End Date. (optional)</label>
+<div class="calendar">
+  <label class="label is-small">PRE-ICO Start Date (optional)</label>
+  <div class="field has-addons">
+  <div class="control">
+    <input type="date" id="start" name="trip-start"
+       placeholder="Select ICO End Date.."
+       min="2018-01-01" max="2018-12-31">
+   {{!-- <input class="input is-primary flatpickr-input" type="text" id="predatetimestart" name="predatetimestart" placeholder="Select PRE-ICO Start Date.." data-input="" readonly="readonly"> <!-- input is mandatory --> --}}
+ </div>
+
+   <div class="control">
+    <a class="button is-info" title="toggle" data-toggle="">
+      <i class="fa fa-calendar"></i>
+    </a>
+  </div>
+  <div class="control">
+   <a class="button is-danger" title="clear" data-clear="">
+     <i class="fa fa-times"></i>
+   </a>
+ </div>
+</div><br>
+
+</div>
+<div class="calendar">
+  <label class="label is-small">PRE-ICO End Date (optional)</label>
+  <div class="field has-addons">
+  <div class="control">
+    <input type="date" id="start" name="trip-start"
+       placeholder="Select ICO End Date.."
+       min="2018-01-01" max="2018-12-31">
+   {{!-- <input class="input is-primary flatpickr-input" type="text" id="predatetimeend" name="predatetimeend" placeholder="Select PRE-ICO End Date.." data-input="" readonly="readonly"> <!-- input is mandatory --> --}}
+ </div>
+
+   <div class="control">
+    <a class="button is-info" title="toggle" data-toggle="">
+      <i class="fa fa-calendar"></i>
+    </a>
+  </div>
+  <div class="control">
+   <a class="button is-danger" title="clear" data-clear="">
+     <i class="fa fa-times"></i>
+   </a>
+ </div>
+  </div>
+
+</div>
+<script>
+$(".calendar").flatpickr({
+  enableTime: true,
+  dateFormat: "d.m.Y H:i",
+  wrap: true
+
+});
+</script>
+
+</div>
+</div>
+<div class="formborder">
+   <h1><span><strong>ICO SALE Details </strong><small>Fields * are rquired</small></span></h1>
+<div class="field" style="margin-top:30px;">
+<label class="label">ICO or Crowdsale Title *</label>
+<div class="control ">
+  <input class="input is-primary" type="text" placeholder="For Example: Listico ICO sale" name="icotitle">
+</div>
+<p class="help is-primary">Give Us Your ICO Or Crowdsale Tite</p>
+</div>
+
+<div class="field">
+<label class="label">Token Name*</label>
+<div class="control ">
+  <input class="input is-primary" type="text" placeholder="For Example: ListICO Token" name="tokenname">
+</div>
+</div>
+
+<div class="field">
+<label class="label">Token Symbol*</label>
+<div class="control ">
+  <input class="input is-primary" type="text" placeholder="For Example: LIP " name="tokensym">
+</div>
+</div>
+<div class="field">
+<label class="label">What is the Basic Rate (optional)</label>
+<div class="control ">
+  <input class="input is-primary" type="text" placeholder="FOR EXAMPLE: 1ETH = 5000LIP" name="rate">
+</div>
+</div>
+
+<div class="field">
+<label class="label">white paper link</label>
+<div class="control ">
+  <input class="input is-primary" type="text"  name="icogoal">
+</div>
+<div class="field">
+<label class="label">What is your Total Supply (optional)</label>
+<div class="control ">
+  <input class="input is-primary" type="text" placeholder="FOR EXAMPLE: 120000000 or Unlimited" name="icogoal">
+</div>
+</div>
+
+
+
+<div class="field">
+  <label class="label">Upload an image*</label>
+  <div class="file is-primary has-name is-boxed">
+    <label class="file-label">
+      <input class="file-input" type="file" name="fileUpload" id="fileUpload">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fa fa-cloud-upload"></i>
+        </span>
+        <span class="file-label">
+          Main Image*<br>
+        </span>
+      </span>
+      <span class="">
+            <div id="preview">Preview:</div>
+          </span>
+    </label>
+  </div>
+</div>
+<label class="label">Upload your Logo*</label>
+  <div class="file is-primary has-name is-boxed">
+    <label class="file-label">
+      <input class="file-input" type="file" name="logoUpload" id="logoUpload">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fa fa-cloud-upload"></i>
+        </span>
+        <span class="file-label">
+          Your Logo*<br>
+        </span>
+      </span>
+      <span class="">
+        <div id="preview2">Preview:<br></div>
+      </span>
+    </label>
+</div>
+
+<div class="field">
+  <label class="label">Type*</label>
+  <div class="control">
+    <div class="select">
+      <select name="typecat" id="typecat">
+        <option value="">Select a Type</option>
+        <option value="Blockchain">Blockchain</option>
+        <option value="Directed Acyclic Graph">Directed Acyclic Graph</option>
+        <option value="Token">Token</option>
+        <option value="Business">Business</option>
+      </select>
+    </div>
+  </div>
+  <p class="help is-primary">To help backers find your campaign, select a Type that best represents your project.</p>
+</div>
+
+<div class="field">
+  <label class="label">ICO Campaign Platform</label>
+  <div class="control">
+    <div class="select">
+      <select name="platcat" id="platcat">
+        <option value="">Select a Platform</option>
+                    <option value="Bitcoin">Bitcoin</option>
+                    <option value="Komodo">Komodo</option>
+                    <option value="Bitshares">Bitshares</option>
+                    <option value="Ethereum">Ethereum</option>
+                    <option value="EOS">EOS</option>
+                    <option value="Stellar Lumens">Stellar Lumens</option>
+                    <option value="NEM">NEM</option>
+                    <option value="Neo">Neo</option>
+                    <option value="Ubiq">Ubiq</option>
+                    <option value="Waves">Waves</option>
+      </select>
+    </div>
+  </div>
+  <p class="help is-primary">What platform do you use?</p>
+</div>
+
+
+<div class="field">
+  <label class="label">ICO Campaign Category*</label>
+  <div class="control">
+    <div class="select">
+      <select name="icocat" id="icocat">
+        <option value="">Select a Category</option>
+                      <option value="Art &amp; Music">Art &amp; Music</option>
+                      <option value="Content Management">Content Management</option>
+                      <option value="Commerce &amp; Advertising">Commerce  &amp; Advertising</option>
+                      <option value="Commodities">Commodities</option>
+                      <option value="Communications">Communications</option>
+                      <option value="Compliance &amp; Security">Compliance &amp; Security</option>
+                      <option value="Data Analytics">Data Analytics</option>
+                      <option value="Drugs &amp; Healthcare">Drugs &amp; Healthcare</option>
+                      <option value="Education">Education</option>
+                      <option value="Energy &amp; Utilities">Energy &amp; Utilities</option>
+                      <option value="Events &amp; Entertainment">Events &amp; Entertainment</option>
+                      <option value="Finance">Finance</option>
+                      <option value="Gaming &amp; VR">Gaming &amp; VR</option>
+                      <option value="Gambling">Gambling</option>
+                      <option value="Governance">Governance</option>
+                      <option value="Identity &amp; Reputation">Identity &amp; Reputation</option>
+                      <option value="Infrastructure">Infrastructure</option>
+                      <option value="Machine Leaning And AI">Machine Leaning And AI</option>
+                      <option value="Mining">Mining</option>
+                      <option value="Payments">Payments</option>
+                      <option value="Privacy &amp; Security">Privacy &amp; Security</option>
+                      <option value="Real Estate">Real Estate</option>
+                      <option value="Social Network">Social Network</option>
+                      <option value="Supply &amp; Logistics">Supply &amp; Logistics</option>
+                      <option value="Transport">Transport</option>
+                      <option value="Trading &amp; Investing">Trading &amp; Investing</option>
+                      <option value="Travel &amp; Tourisim">Travel &amp; Tourisim</option>
+      </select>
+    </div>
+  </div>
+  <p class="help is-primary">To help backers find your ICO campaign, select a category that best represents your ICO project.</p>
+</div>
+
+<div class="field">
+<label class="label">Website*</label>
+<div class="control ">
+  <input class="input is-primary" type="text" placeholder="For example: http://www.listico.io " name="icowebsite">
+</div>
+</div>
+<div class="field">
+<label class="label">Youtube Promo video link (optional)</label>
+<div class="control ">
+  <input class="input is-primary" type="text" placeholder="For example: https://www.youtube.com/watch?v=ncNtoU_gk38 " name="ytt">
+</div>
+</div>
+<div class="field">
+<label class="label">Vimeo Promo video link (optional)</label>
+<div class="control ">
+  <input class="input is-primary" type="text" placeholder="For example: https://vimeo.com/234175641 " name="vtt">
+</div>
+</div>
+
+
+<div class="field">
+<label class="label">Campaign Duration Set your ICO Start and End Date.*</label>
+<div class="calendar">
+  <label class="label is-small">ICO Start Date*</label>
+  <div class="field has-addons">
+  <div class="control">
+    <input type="date" id="start" name="trip-start"
+       placeholder="Select ICO End Date.."
+       min="2018-01-01" max="2018-12-31">
+   {{!-- <input class="input is-primary flatpickr-input" type="text" id="datetimestart" name="datetimestart" placeholder="Select ICO Start Date.." data-input="" readonly="readonly"> <!-- input is mandatory --> --}}
+ </div>
+   <div class="control">
+    <a class="button is-info" title="toggle" data-toggle="">
+      <i class="fa fa-calendar"></i>
+    </a>
+  </div>
+  <div class="control">
+   <a class="button is-danger" title="clear" data-clear="">
+     <i class="fa fa-times"></i>
+   </a>
+ </div>
+
+
+
+</div><br>
+
+</div>
+<div class="calendar">
+  <label class="label is-small">ICO End Date*</label>
+  <div class="field has-addons">
+  <div class="control">
+    <input type="date" id="start" name="trip-start"
+       placeholder="Select ICO End Date.."
+       min="2018-01-01" max="2018-12-31">
+   {{!-- <input class="input is-primary flatpickr-input" type="date" id="datetimeend" name="datetimeend" placeholder="Select ICO End Date.." data-input="" readonly="readonly"> <!-- input is mandatory --> --}}
+ </div>
+
+   <div class="control">
+    <a class="button is-info" title="toggle" data-toggle="">
+      <i class="fa fa-calendar"></i>
+    </a>
+  </div>
+  <div class="control">
+   <a class="button is-danger" title="clear" data-clear="">
+     <i class="fa fa-times"></i>
+   </a>
+ </div>
+  </div>
+
+</div>
+<script>
+$(".calendar").flatpickr({
+  enableTime: true,
+  dateFormat: "d.m.Y H:i",
+  wrap: true
+
+});
+</script>
+</div>
+</div>
+<div class="formborder">
+   <h1><span><strong>ICO SALE Links, Social Media </strong><small>Optional fields</small></span></h1>
+   <div class="field" style="margin-top:30px;">
+   <label class="label">Facebook</label>
+   <div class="control has-icons-left">
+     <input class="input is-primary" type="text" value="" name="icofb">
+     <span class="icon is-small is-left">
+       <i class="fa fa-facebook-official"></i>
+     </span>
+   </div>
+   <p class="help is-primary">Please include http:// or https://)</p>
+   </div>
+
+   <div class="field">
+   <label class="label">Twitter</label>
+   <div class="control has-icons-left ">
+     <input class="input is-primary" type="text" value="" name="icotw">
+     <span class="icon is-small is-left">
+       <i class="fa fa-twitter"></i>
+     </span>
+   </div>
+   <p class="help is-primary">e.g.: https://twitter.com/your-name</p>
+   </div>
+
+   <div class="field">
+   <label class="label">Github</label>
+   <div class="control has-icons-left">
+     <input class="input is-primary" type="text" value="" name="icogit">
+     <span class="icon is-small is-left">
+       <i class="fa fa-github"></i>
+     </span>
+   </div>
+   <p class="help is-primary">(please include http:// or https://)</p>
+   </div>
+
+   <div class="field">
+   <label class="label">Slack</label>
+   <div class="control has-icons-left">
+     <input class="input is-primary" type="text" value="" name="icosla">
+     <span class="icon is-small is-left">
+       <i class="fa fa-slack"></i>
+     </span>
+   </div>
+   <p class="help is-primary">e.g.: https://your-team.slack.com</p>
+   </div>
+
+   <div class="field">
+   <label class="label">LinkedIn</label>
+   <div class="control has-icons-left">
+     <input class="input is-primary" type="text" value="" name="linkedin">
+     <span class="icon is-small is-left">
+       <i class="fa fa-linkedin-square"></i>
+     </span>
+   </div>
+   <p class="help is-primary">Please include http:// or https://)</p>
+   </div>
+
+   <div class="field">
+   <label class="label">Reddit</label>
+   <div class="control has-icons-left">
+     <input class="input is-primary" type="text" value="" name="reddit">
+     <span class="icon is-small is-left">
+       <i class="fa fa-reddit-alien"></i>
+     </span>
+   </div>
+   <p class="help is-primary">Please include http:// or https://)</p>
+   </div>
+
+   <div class="field">
+   <label class="label">Announces/Forums</label>
+   <div class="control has-icons-left">
+     <input class="input is-primary" type="text" value="" name="forum">
+     <span class="icon is-small is-left">
+       <i class="fa fa-bullhorn"></i>
+     </span>
+   </div>
+   <p class="help is-primary">Please include http:// or https://)</p>
+   </div>
+
+   <div class="field">
+   <label class="label">Telegram</label>
+   <div class="control has-icons-left">
+     <input class="input is-primary" type="text" value="" name="telegram">
+     <span class="icon is-small is-left">
+       <i class="fa fa-telegram"></i>
+     </span>
+   </div>
+   <p class="help is-primary">Please include http:// or https://)</p>
+   </div>
+
+   <div class="field">
+   <label class="label">Instagram</label>
+   <div class="control has-icons-left">
+     <input class="input is-primary" type="text" value="" name="instagram">
+     <span class="icon is-small is-left">
+       <i class="fa fa-instagram"></i>
+     </span>
+   </div>
+   <p class="help is-primary">Please include http:// or https://)</p>
+   </div>
+
+   <div class="field">
+   <label class="label">Blog</label>
+   <div class="control has-icons-left">
+     <input class="input is-primary" type="text" value="" name="blog">
+     <span class="icon is-small is-left">
+       <i class="fa fa-rss"></i>
+     </span>
+   </div>
+   <p class="help is-primary">Please include http:// or https://)</p>
+   </div>
+</div>
+<div class="formborder">
+   <h1><span><strong>For invoice </strong><small>we use it only for invoicing prupose</small></span></h1>
+  <div class="field" style="margin-top:30px;">
+  <label class="label">Your First Name*</label>
+  <div class="control has-icons-left">
+    <input class="input is-primary" type="text" placeholder="First Name" name="name" id="name">
+    <span class="icon is-small is-left">
+      <i class="fa fa-user"></i>
+    </span>
+  </div>
+</div>
+<div class="field">
+<label class="label">Your Surname*</label>
+<div class="control has-icons-left">
+  <input class="input is-primary" type="text" placeholder="Surname" name="surname" id="surname">
+  <span class="icon is-small is-left">
+    <i class="fa fa-user"></i>
+  </span>
+</div>
+</div>
+<div class="field">
+  <label class="label">Individual or Company</label>
+  <div class="control">
+    <div class="select is-primary">
+    <select name="companyorindividual" id="companyorindividual">
+      <option value="individual" id="optIndividual">Individual</option>
+      <option value="company" id="optCompany">Company</option>
+    </select>
+  </div>
+  </div>
+</div>
+<div class="row-company">
+  <div class="field">
+    <label class="label">Company Name <small class="req is-size-7 has-text-danger is-hidden">Required*</small></label>
+    <div class="control has-icons-left has-icons-right">
+      <input class="input " id="company" type="text" name="company" placeholder="Company Name" disabled="">
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Company Reg. Number OR Company Code Or any Company ID  Or TAX ID<small class="req is-size-7 has-text-danger is-hidden">Required*</small></label>
+    <div class="control has-icons-left has-icons-right">
+      <input class="input " id="company_reg_number" type="text" name="company_reg_number" placeholder="Company Rrg. NR. OR Company Code" disabled="">
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Company VAT number <small class="is-size-7 has-text-grey">only if your company has VAT number</small></label>
+    <div class="control has-icons-left has-icons-right">
+      <input class="input " id="company_vat_number" type="text" name="company_vat_number" placeholder="Company VAT number" disabled="">
+    </div>
+  </div>
+</div>
+<div class="field">
+  <label class="label">Select Country</label>
+  <div class="control">
+    <div class="select is-primary">
+    <select id="country" name="country">
+      <option value="" selected="">Select Country</option>
+                                                                                   <option name="93" value="AF">Afghanistan</option>
+                                                                                   <option name="358" value="AX">Åland Islands</option>
+                                                                                   <option name="355" value="AL">Albania</option>
+                                                                                   <option name="213" value="DZ">Algeria</option>
+                                                                                   <option name="1684" value="AS">American Samoa</option>
+                                                                                   <option name="376" value="AD">Andorra</option>
+                                                                                   <option name="244" value="AO">Angola</option>
+                                                                                   <option name="1264" value="AI">Anguilla</option>
+                                                                                   <option name="672" value="AQ">Antarctica</option>
+                                                                                   <option name="1268" value="AG">Antigua and Barbuda</option>
+                                                                                   <option name="54" value="AR">Argentina</option>
+                                                                                   <option name="374" value="AM">Armenia</option>
+                                                                                   <option name="297" value="AW">Aruba</option>
+                                                                                   <option name="61" value="AU">Australia</option>
+                                                                                   <option name="43" value="AT">Austria</option>
+                                                                                   <option name="994" value="AZ">Azerbaijan</option>
+                                                                                   <option name="1242" value="BS">Bahamas</option>
+                                                                                   <option name="973" value="BH">Bahrain</option>
+                                                                                   <option name="880" value="BD">Bangladesh</option>
+                                                                                   <option name="1246" value="BB">Barbados</option>
+                                                                                   <option name="375" value="BY">Belarus</option>
+                                                                                   <option name="32" value="BE">Belgium</option>
+                                                                                   <option name="501" value="BZ">Belize</option>
+                                                                                   <option name="229" value="BJ">Benin</option>
+                                                                                   <option name="1441" value="BM">Bermuda</option>
+                                                                                   <option name="975" value="BT">Bhutan</option>
+                                                                                   <option name="591" value="BO">Bolivia (Plurinational State of)</option>
+                                                                                   <option name="5997" value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                                                                                   <option name="387" value="BA">Bosnia and Herzegovina</option>
+                                                                                   <option name="267" value="BW">Botswana</option>
+                                                                                   <option name="" value="BV">Bouvet Island</option>
+                                                                                   <option name="55" value="BR">Brazil</option>
+                                                                                   <option name="246" value="IO">British Indian Ocean Territory</option>
+                                                                                   <option name="" value="UM">United States Minor Outlying Islands</option>
+                                                                                   <option name="1284" value="VG">Virgin Islands (British)</option>
+                                                                                   <option name="1 340" value="VI">Virgin Islands (U.S.)</option>
+                                                                                   <option name="673" value="BN">Brunei Darussalam</option>
+                                                                                   <option name="359" value="BG">Bulgaria</option>
+                                                                                   <option name="226" value="BF">Burkina Faso</option>
+                                                                                   <option name="257" value="BI">Burundi</option>
+                                                                                   <option name="855" value="KH">Cambodia</option>
+                                                                                   <option name="237" value="CM">Cameroon</option>
+                                                                                   <option name="1" value="CA">Canada</option>
+                                                                                   <option name="238" value="CV">Cabo Verde</option>
+                                                                                   <option name="1345" value="KY">Cayman Islands</option>
+                                                                                   <option name="236" value="CF">Central African Republic</option>
+                                                                                   <option name="235" value="TD">Chad</option>
+                                                                                   <option name="56" value="CL">Chile</option>
+                                                                                   <option name="86" value="CN">China</option>
+                                                                                   <option name="61" value="CX">Christmas Island</option>
+                                                                                   <option name="61" value="CC">Cocos (Keeling) Islands</option>
+                                                                                   <option name="57" value="CO">Colombia</option>
+                                                                                   <option name="269" value="KM">Comoros</option>
+                                                                                   <option name="242" value="CG">Congo</option>
+                                                                                   <option name="243" value="CD">Congo (Democratic Republic of the)</option>
+                                                                                   <option name="682" value="CK">Cook Islands</option>
+                                                                                   <option name="506" value="CR">Costa Rica</option>
+                                                                                   <option name="385" value="HR">Croatia</option>
+                                                                                   <option name="53" value="CU">Cuba</option>
+                                                                                   <option name="599" value="CW">Curaçao</option>
+                                                                                   <option name="357" value="CY">Cyprus</option>
+                                                                                   <option name="420" value="CZ">Czech Republic</option>
+                                                                                   <option name="45" value="DK">Denmark</option>
+                                                                                   <option name="253" value="DJ">Djibouti</option>
+                                                                                   <option name="1767" value="DM">Dominica</option>
+                                                                                   <option name="1809" value="DO">Dominican Republic</option>
+                                                                                   <option name="593" value="EC">Ecuador</option>
+                                                                                   <option name="20" value="EG">Egypt</option>
+                                                                                   <option name="503" value="SV">El Salvador</option>
+                                                                                   <option name="240" value="GQ">Equatorial Guinea</option>
+                                                                                   <option name="291" value="ER">Eritrea</option>
+                                                                                   <option name="372" value="EE">Estonia</option>
+                                                                                   <option name="251" value="ET">Ethiopia</option>
+                                                                                   <option name="500" value="FK">Falkland Islands (Malvinas)</option>
+                                                                                   <option name="298" value="FO">Faroe Islands</option>
+                                                                                   <option name="679" value="FJ">Fiji</option>
+                                                                                   <option name="358" value="FI">Finland</option>
+                                                                                   <option name="33" value="FR">France</option>
+                                                                                   <option name="594" value="GF">French Guiana</option>
+                                                                                   <option name="689" value="PF">French Polynesia</option>
+                                                                                   <option name="" value="TF">French Southern Territories</option>
+                                                                                   <option name="241" value="GA">Gabon</option>
+                                                                                   <option name="220" value="GM">Gambia</option>
+                                                                                   <option name="995" value="GE">Georgia</option>
+                                                                                   <option name="49" value="DE">Germany</option>
+                                                                                   <option name="233" value="GH">Ghana</option>
+                                                                                   <option name="350" value="GI">Gibraltar</option>
+                                                                                   <option name="30" value="GR">Greece</option>
+                                                                                   <option name="299" value="GL">Greenland</option>
+                                                                                   <option name="1473" value="GD">Grenada</option>
+                                                                                   <option name="590" value="GP">Guadeloupe</option>
+                                                                                   <option name="1671" value="GU">Guam</option>
+                                                                                   <option name="502" value="GT">Guatemala</option>
+                                                                                   <option name="44" value="GG">Guernsey</option>
+                                                                                   <option name="224" value="GN">Guinea</option>
+                                                                                   <option name="245" value="GW">Guinea-Bissau</option>
+                                                                                   <option name="592" value="GY">Guyana</option>
+                                                                                   <option name="509" value="HT">Haiti</option>
+                                                                                   <option name="" value="HM">Heard Island and McDonald Islands</option>
+                                                                                   <option name="379" value="VA">Holy See</option>
+                                                                                   <option name="504" value="HN">Honduras</option>
+                                                                                   <option name="852" value="HK">Hong Kong</option>
+                                                                                   <option name="36" value="HU">Hungary</option>
+                                                                                   <option name="354" value="IS">Iceland</option>
+                                                                                   <option name="91" value="IN">India</option>
+                                                                                   <option name="62" value="ID">Indonesia</option>
+                                                                                   <option name="225" value="CI">Côte d'Ivoire</option>
+                                                                                   <option name="98" value="IR">Iran (Islamic Republic of)</option>
+                                                                                   <option name="964" value="IQ">Iraq</option>
+                                                                                   <option name="353" value="IE">Ireland</option>
+                                                                                   <option name="44" value="IM">Isle of Man</option>
+                                                                                   <option name="972" value="IL">Israel</option>
+                                                                                   <option name="39" value="IT">Italy</option>
+                                                                                   <option name="1876" value="JM">Jamaica</option>
+                                                                                   <option name="81" value="JP">Japan</option>
+                                                                                   <option name="44" value="JE">Jersey</option>
+                                                                                   <option name="962" value="JO">Jordan</option>
+                                                                                   <option name="76" value="KZ">Kazakhstan</option>
+                                                                                   <option name="254" value="KE">Kenya</option>
+                                                                                   <option name="686" value="KI">Kiribati</option>
+                                                                                   <option name="965" value="KW">Kuwait</option>
+                                                                                   <option name="996" value="KG">Kyrgyzstan</option>
+                                                                                   <option name="856" value="LA">Lao People's Democratic Republic</option>
+                                                                                   <option name="371" value="LV">Latvia</option>
+                                                                                   <option name="961" value="LB">Lebanon</option>
+                                                                                   <option name="266" value="LS">Lesotho</option>
+                                                                                   <option name="231" value="LR">Liberia</option>
+                                                                                   <option name="218" value="LY">Libya</option>
+                                                                                   <option name="423" value="LI">Liechtenstein</option>
+                                                                                   <option name="370" value="LT">Lithuania</option>
+                                                                                   <option name="352" value="LU">Luxembourg</option>
+                                                                                   <option name="853" value="MO">Macao</option>
+                                                                                   <option name="389" value="MK">Macedonia (the former Yugoslav Republic of)</option>
+                                                                                   <option name="261" value="MG">Madagascar</option>
+                                                                                   <option name="265" value="MW">Malawi</option>
+                                                                                   <option name="60" value="MY">Malaysia</option>
+                                                                                   <option name="960" value="MV">Maldives</option>
+                                                                                   <option name="223" value="ML">Mali</option>
+                                                                                   <option name="356" value="MT">Malta</option>
+                                                                                   <option name="692" value="MH">Marshall Islands</option>
+                                                                                   <option name="596" value="MQ">Martinique</option>
+                                                                                   <option name="222" value="MR">Mauritania</option>
+                                                                                   <option name="230" value="MU">Mauritius</option>
+                                                                                   <option name="262" value="YT">Mayotte</option>
+                                                                                   <option name="52" value="MX">Mexico</option>
+                                                                                   <option name="691" value="FM">Micronesia (Federated States of)</option>
+                                                                                   <option name="373" value="MD">Moldova (Republic of)</option>
+                                                                                   <option name="377" value="MC">Monaco</option>
+                                                                                   <option name="976" value="MN">Mongolia</option>
+                                                                                   <option name="382" value="ME">Montenegro</option>
+                                                                                   <option name="1664" value="MS">Montserrat</option>
+                                                                                   <option name="212" value="MA">Morocco</option>
+                                                                                   <option name="258" value="MZ">Mozambique</option>
+                                                                                   <option name="95" value="MM">Myanmar</option>
+                                                                                   <option name="264" value="NA">Namibia</option>
+                                                                                   <option name="674" value="NR">Nauru</option>
+                                                                                   <option name="977" value="NP">Nepal</option>
+                                                                                   <option name="31" value="NL">Netherlands</option>
+                                                                                   <option name="687" value="NC">New Caledonia</option>
+                                                                                   <option name="64" value="NZ">New Zealand</option>
+                                                                                   <option name="505" value="NI">Nicaragua</option>
+                                                                                   <option name="227" value="NE">Niger</option>
+                                                                                   <option name="234" value="NG">Nigeria</option>
+                                                                                   <option name="683" value="NU">Niue</option>
+                                                                                   <option name="672" value="NF">Norfolk Island</option>
+                                                                                   <option name="850" value="KP">Korea (Democratic People's Republic of)</option>
+                                                                                   <option name="1670" value="MP">Northern Mariana Islands</option>
+                                                                                   <option name="47" value="NO">Norway</option>
+                                                                                   <option name="968" value="OM">Oman</option>
+                                                                                   <option name="92" value="PK">Pakistan</option>
+                                                                                   <option name="680" value="PW">Palau</option>
+                                                                                   <option name="970" value="PS">Palestine, State of</option>
+                                                                                   <option name="507" value="PA">Panama</option>
+                                                                                   <option name="675" value="PG">Papua New Guinea</option>
+                                                                                   <option name="595" value="PY">Paraguay</option>
+                                                                                   <option name="51" value="PE">Peru</option>
+                                                                                   <option name="63" value="PH">Philippines</option>
+                                                                                   <option name="64" value="PN">Pitcairn</option>
+                                                                                   <option name="48" value="PL">Poland</option>
+                                                                                   <option name="351" value="PT">Portugal</option>
+                                                                                   <option name="1787" value="PR">Puerto Rico</option>
+                                                                                   <option name="974" value="QA">Qatar</option>
+                                                                                   <option name="383" value="XK">Republic of Kosovo</option>
+                                                                                   <option name="262" value="RE">Réunion</option>
+                                                                                   <option name="40" value="RO">Romania</option>
+                                                                                   <option name="7" value="RU">Russian Federation</option>
+                                                                                   <option name="250" value="RW">Rwanda</option>
+                                                                                   <option name="590" value="BL">Saint Barthélemy</option>
+                                                                                   <option name="290" value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+                                                                                   <option name="1869" value="KN">Saint Kitts and Nevis</option>
+                                                                                   <option name="1758" value="LC">Saint Lucia</option>
+                                                                                   <option name="590" value="MF">Saint Martin (French part)</option>
+                                                                                   <option name="508" value="PM">Saint Pierre and Miquelon</option>
+                                                                                   <option name="1784" value="VC">Saint Vincent and the Grenadines</option>
+                                                                                   <option name="685" value="WS">Samoa</option>
+                                                                                   <option name="378" value="SM">San Marino</option>
+                                                                                   <option name="239" value="ST">Sao Tome and Principe</option>
+                                                                                   <option name="966" value="SA">Saudi Arabia</option>
+                                                                                   <option name="221" value="SN">Senegal</option>
+                                                                                   <option name="381" value="RS">Serbia</option>
+                                                                                   <option name="248" value="SC">Seychelles</option>
+                                                                                   <option name="232" value="SL">Sierra Leone</option>
+                                                                                   <option name="65" value="SG">Singapore</option>
+                                                                                   <option name="1721" value="SX">Sint Maarten (Dutch part)</option>
+                                                                                   <option name="421" value="SK">Slovakia</option>
+                                                                                   <option name="386" value="SI">Slovenia</option>
+                                                                                   <option name="677" value="SB">Solomon Islands</option>
+                                                                                   <option name="252" value="SO">Somalia</option>
+                                                                                   <option name="27" value="ZA">South Africa</option>
+                                                                                   <option name="500" value="GS">South Georgia and the South Sandwich Islands</option>
+                                                                                   <option name="82" value="KR">Korea (Republic of)</option>
+                                                                                   <option name="211" value="SS">South Sudan</option>
+                                                                                   <option name="34" value="ES">Spain</option>
+                                                                                   <option name="94" value="LK">Sri Lanka</option>
+                                                                                   <option name="249" value="SD">Sudan</option>
+                                                                                   <option name="597" value="SR">Suriname</option>
+                                                                                   <option name="4779" value="SJ">Svalbard and Jan Mayen</option>
+                                                                                   <option name="268" value="SZ">Swaziland</option>
+                                                                                   <option name="46" value="SE">Sweden</option>
+                                                                                   <option name="41" value="CH">Switzerland</option>
+                                                                                   <option name="963" value="SY">Syrian Arab Republic</option>
+                                                                                   <option name="886" value="TW">Taiwan</option>
+                                                                                   <option name="992" value="TJ">Tajikistan</option>
+                                                                                   <option name="255" value="TZ">Tanzania, United Republic of</option>
+                                                                                   <option name="66" value="TH">Thailand</option>
+                                                                                   <option name="670" value="TL">Timor-Leste</option>
+                                                                                   <option name="228" value="TG">Togo</option>
+                                                                                   <option name="690" value="TK">Tokelau</option>
+                                                                                   <option name="676" value="TO">Tonga</option>
+                                                                                   <option name="1868" value="TT">Trinidad and Tobago</option>
+                                                                                   <option name="216" value="TN">Tunisia</option>
+                                                                                   <option name="90" value="TR">Turkey</option>
+                                                                                   <option name="993" value="TM">Turkmenistan</option>
+                                                                                   <option name="1649" value="TC">Turks and Caicos Islands</option>
+                                                                                   <option name="688" value="TV">Tuvalu</option>
+                                                                                   <option name="256" value="UG">Uganda</option>
+                                                                                   <option name="380" value="UA">Ukraine</option>
+                                                                                   <option name="971" value="AE">United Arab Emirates</option>
+                                                                                   <option name="44" value="GB">United Kingdom of Great Britain and Northern Ireland</option>
+                                                                                   <option name="1" value="US">United States of America</option>
+                                                                                   <option name="598" value="UY">Uruguay</option>
+                                                                                   <option name="998" value="UZ">Uzbekistan</option>
+                                                                                   <option name="678" value="VU">Vanuatu</option>
+                                                                                   <option name="58" value="VE">Venezuela (Bolivarian Republic of)</option>
+                                                                                   <option name="84" value="VN">Viet Nam</option>
+                                                                                   <option name="681" value="WF">Wallis and Futuna</option>
+                                                                                   <option name="212" value="EH">Western Sahara</option>
+                                                                                   <option name="967" value="YE">Yemen</option>
+                                                                                   <option name="260" value="ZM">Zambia</option>
+                                                                                   <option name="263" value="ZW">Zimbabwe</option>
+    </select>
+  </div>
+  </div>
+</div>
+
+
+
+<div class="field">
+  <label class="label">City*</label>
+  <div class="control has-icons-left has-icons-right">
+    <input class="input is-primary" type="text" id="city" name="city" placeholder="City">
+  </div>
+</div>
+<div class="field">
+  <label class="label">Address*</label>
+  <div class="control has-icons-left has-icons-right">
+    <input class="input is-primary" type="text" id="address" name="address" placeholder="Address">
+  </div>
+</div>
+<div class="field">
+  <label class="label">Postal Code*</label>
+  <div class="control has-icons-left has-icons-right">
+    <input class="input is-primary" id="postal_code" type="text" name="postal_code" placeholder="Postal Code">
+  </div>
+</div>
+
+<input id="role" name="role" type="hidden" value="2">
+
+                           <div class="columns">
+                               <div class="column">
+                                   <span id="offshoreInfo" style="font-size: 12px"></span>
+                               </div>
+                           </div>
+</div>
+<div class="formborder">
+   <h1><span><strong>We are chargin a small fee for listing </strong><small> Please Choose</small></span></h1>
+   <div class="field">
+     <label class="label">If you have Pre-ICO and ICO sales you have to pay only once.</label>
+     <div class="control">
+       <div class="select">
+         <select name="pay" id="pay">
+           <option value="">Select your Listing</option>
+                       <option value="Basic">Normal Listing Fee: 0,015 BTC</option>
+                       <option value="BasicETH">Normal Listing Fee: 0.46 ETH</option>
+
+                       <option disabled="">──────────</option>
+                       <option value="Silver">Silver Listing Fee: 0,05 BTC</option>
+                       <option value="SilverETH">Silver Listing Fee: 1.53 ETH</option>
+
+                       <option disabled="">──────────</option>
+                       <option value="Gold">Gold Listing Fee: 0,08 BTC</option>
+                       <option value="GoldETH">Gold Listing Fee: 2.45 ETH</option>
+
+
+         </select>
+       </div>
+     </div>
+     <p class="help is-primary">We redirect you to the payment section after the registration</p>
+   </div>
+   <div>
+      <div class="notification is-warning">
+     <strong>Gold Listing 0,08BTC:</strong>It is including being listed around the top of our page, 1 Blogpost or Press Release, Twitter and Reddit Posts time to time during your ICO sale, 2 Newsletter about your project to our subscribers.
+<br> <strong>You can also pay in ETH<br>ETH price is calculated based on current price on coinmarketcap.com<br>Price in ETH: 2.45</strong><br>
+
+     </div>
+   </div>
+   <div>
+      <div class="notification is-warning">
+     <strong>Silver Listing 0,05BTC:</strong>It is including being listed around the middle of our page, Twitter and Reddit post time to time during your ICO sale, 1 Newsletter about your project to our subscribers.
+     <br> <strong>You can also pay in ETH<br>ETH price is calculated based on current price on coinmarketcap.com<br>Price in ETH: 1.53</strong><br>
+
+   </div>
+   </div>
+   <div>
+      <div class="notification is-warning">
+     <strong>Normal Listing 0,015BTC:</strong>It is including being listed below silver listing, 1 Twitter tweet, 1 Reddit post.
+     <br> <strong>You can also pay in ETH<br>ETH price is calculated based on current price on coinmarketcap.com<br>Price in ETH: 0.46</strong>
+
+   </div>
+   </div>
+ </div>
+
+
+<input type="hidden" name="normalethprice" value="0.46">
+
+<input type="hidden" name="silverethprice" value="1.53">
+
+
+<input type="hidden" name="goldethprice" value="2.45">
+
+<br>
+<br>
+</div>
+
+
+</form>
+
+
+{{!-- <div class="field is-grouped">
+  <div class="control" >
+    <button class="button is-primary" data-toggle="modal" data-target="#myModal">Submit ICO</button>
+  </div>
+</div> --}}
+
+  <button class="btn" data-toggle="modal" data-target="#myModal">Submit ICO</button>
+  
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Thanks !</h4>
+      </div>
+      <div class="modal-body">
+       	<p class="model_paragraph">We Have Received Your Request For Listing Your Token on Our Platform For ICO.</p>
+											<p class="model_paragraph">We Will Contact On Your mail ID Provided For Future Discussion.</p>
+        								
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>			
+			
+</body>
+</html>
