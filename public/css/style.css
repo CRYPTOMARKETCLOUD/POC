@@ -23,7 +23,7 @@ body {
 .crypto {
     padding: 15px 0;
     text-align: center;
-    background: #00285080;
+    background: #04029cfa;
     color: #fff;
     font-family: Helvetica Neue;
 }
@@ -40,7 +40,7 @@ section.cntnt {
     text-align: center;
     padding: 150px 0px;
     height: 300px;
-    background: rgba(0,0,0,0.8);
+    background: #04029cfa;
     margin-top: 150px;
     font-size: 24px;
     border-radius: 20px;
@@ -53,7 +53,7 @@ section.cntnt {
     text-align: center;
     padding: 130px 0;
     height: 300px;
-    background:rgba(0,0,0,0.8);
+    background:#04029cfa;
     margin-top: 150px;
     font-size: 24px;
     border-radius: 20px;
@@ -89,7 +89,7 @@ section.cntnt {
   text-align: center;
   padding: 150px 0;
   height: 300px;
-  background: rgba(0,0,0,0.8);
+  background: #04029cfa;
   margin-top: 150px;
   font-size: 24px;
   border-radius: 20px;
