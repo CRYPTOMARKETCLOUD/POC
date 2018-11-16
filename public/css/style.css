@@ -44,6 +44,7 @@ section.cntnt {
     margin-top: 150px;
     font-size: 24px;
     border-radius: 20px;
+    opacity: 0.8;
 }
 .link_1_11 a {
     color: #fff;
@@ -57,6 +58,8 @@ section.cntnt {
     margin-top: 150px;
     font-size: 24px;
     border-radius: 20px;
+    opacity: 0.8;
+
 }
 .link_1_1_1 a {
     color: #fff;
@@ -93,6 +96,8 @@ section.cntnt {
   margin-top: 150px;
   font-size: 24px;
   border-radius: 20px;
+  opacity: 0.8;
+
 }
 .link-1-1 a {
     color: #fff;
