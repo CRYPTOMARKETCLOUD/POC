@@ -3,12 +3,16 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'TF' });
+  res.render('homepage');
 });
 
 /*. */
 router.get('/home', function(req, res, next) {
   res.render('homepage');
+});
+
+router.get('/tokenmaking', function(req, res, next) {
+  res.render('index');
 });
 
 router.get('/icoplatform', function(req, res, next) {
