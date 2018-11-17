@@ -14,7 +14,7 @@ body {
 .crypto {
     padding: 15px 0;
     text-align: center;
-    background: #402ea2;
+    background: #232342fa;
     color: #fff;
     font-family: Helvetica Neue;
 }
@@ -23,6 +23,11 @@ body {
     font-weight: 600;
     margin: 0px;
     padding: 8px 0;
+}
+.logo img{
+    position: absolute;
+    left: 10px;
+    top: -1px;
 }
 section.cntnt {
     padding: 10px 0;

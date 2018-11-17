@@ -1,15 +1,15 @@
-body {
+/*body {
   color: #666666;
   font-family: "Open Sans", sans-serif;
   position: relative!important;
   background: url(../images/herobg.jpg) top center fixed;
   background-size: cover;
 
-}
+}*/
 .overlay{
  position: absolute;
  height:100vh;
- background-color:rgba(1, 59, 77, 0.6);
+ /*background-color:rgba(1, 59, 77, 0.6)z;*/
  width: 100%;
 }
 
@@ -22,7 +22,8 @@ Try it Yourself »
 
 .greenish{
 	/*background-color: #013b4d;*/
-    background:-webkit-linear-gradient(left, rgba(114, 228, 141, 0.32), rgba(76, 154, 206, 0.47));
+    /*background:-webkit-linear-gradient(left, rgba(114, 228, 141, 0.32), rgba(76, 154, 206, 0.47));*/
+
 	border-radius: 0px;
 	border: none;
     height: 60px;
@@ -30,14 +31,23 @@ Try it Yourself »
     box-shadow: 2px 1px 5px 1px #081519;
 }
 .logo{
-    font-size: 30px;
-    font-family: Adobe Caslon Pro;
+    font-size: 24px;
+    font-family: Helvetica Neue;
     font-weight: 700;
+    background-color: #232342fa;
+    color: white;
+    padding: 20px 0px;
 }
 .logo a{
 	color: #fff;
-	line-height: 60px;
+/*	line-height: 60px;*/
 	text-decoration: none;
+  font-weight: 600;
+}
+.logo img{
+  position: absolute;
+    left: 106px;
+    top: 5px;
 }
 .margin_50{
 	margin-top: 65px;
@@ -275,3 +285,6 @@ footer{
       background-color: #28b5e0!important;
       color: #000000;
   }
+body{
+   background: #ecf3f3;
+}

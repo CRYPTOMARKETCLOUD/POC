@@ -5,11 +5,21 @@ a:link {
     text-decoration: none;
 }
 .header{
-	background-color: #00004d;
+	/*padding: 12px 0;*/
+    text-align: center;
+    background: #232342fa;
+    color: #fff;
+    font-family: Helvetica Neue;
 }
 .header a{
 color: white;
 float: left;
+}
+.header img{
+   position: absolute;
+    left: 80px;
+    top: 30px;
+  
 }
 .cloud{
 	padding: 20px 180px;

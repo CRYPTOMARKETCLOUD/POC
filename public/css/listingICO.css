@@ -5,11 +5,23 @@ a:link {
     text-decoration: none;
 }
 .header{
-	background-color: #002b80;
+	/*background-color: #232342fa;
+	*/
+	/*padding: 12px 0;*/
+    text-align: center;
+    background: #232342fa;
+    color: #fff;
+    font-family: Helvetica Neue;
 }
 .header a{
 color: white;
 float: left;
+}
+.header img{
+	 position: absolute;
+    left: 80px;
+    top: 30px;
+   
 }
 
 .clearfix:after {
@@ -39,7 +51,7 @@ clear: both;
 	padding: 1px 0px;
 }
 .button{
-	background-color: #002b80;
+	background-color: #060654;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -60,14 +72,17 @@ table {
     width: 100%;
 }
 .one{
-	background-color: #66b3ff;
+	background-color: #242650;
 	margin: 20%; 
+	color: white;
 }
 .two{
-	background-color: #b3d9ff;
+	background-color: #3f4177;
+	color: white;
 }
 .three{
-	background-color: #b3d9ff;
+	background-color: #3f4177;
+	color: white;
 }
 .click {
 	cursor: pointer;
@@ -101,7 +116,7 @@ th {
 	margin-bottom: 100px;
 }
 .footer{
-	background-color:  #002b80;
+	background-color:  #232342fa;
 	/*padding: 80px 10px;*/
 	/*margin-bottom: 80px;
 	margin-top: 40px;*/
